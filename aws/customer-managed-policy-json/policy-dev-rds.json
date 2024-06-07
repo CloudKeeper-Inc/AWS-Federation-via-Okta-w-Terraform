@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "rds:*",
+            "Effect": "Allow",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:userid": [
+                        "*:aditya.ajay@tothenew.com",
+                        "*:ravi.rana@tothenew.com"
+                    ]
+                },
+                "DateLessThan": {
+                    "aws:CurrentTime": "2024-04-05T00:00:00Z"
+                }
+            }
+        }
+    ]
+}

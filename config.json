@@ -1,0 +1,40 @@
+{
+    "account_no": ["533267148575","992382837262","471112674289"],
+    "idp-admin-role": {
+        "account_id": ["533267148575","992382837262"],
+        "policies": [
+            {
+                "name": "dev-dba-new-full-access-policy",
+                "policy_json": "customer-managed-policy-json/policy-dev-dba.json"
+            },
+            {
+                "name": "dev-rds-new-full-access-policy",
+                "policy_json": "customer-managed-policy-json/policy-dev-rds.json"
+            }
+        ],
+        "inline_policies": [
+            {
+                "example-full-access-policy": "inline-policy-json/inline-policy-dev-jit.json"
+            }
+        ],
+        "managed_policy": ["arn:aws:iam::aws:policy/ReadOnlyAccess"]
+
+    },
+    "idp-dba-role": {
+        "account_id": ["992382837262","471112674289"],
+        "policies": [
+            {
+                "name": "dev-rds-new-full-access-policy",
+                "policy_json": "customer-managed-policy-json/policy-dev-rds.json"
+            }
+        ],
+        "inline_policies": [
+            {
+                "example-full-access-policy": "inline-policy-json/inline-policy-dev-dba.json"
+            }
+        ],
+        "managed_policy": ["arn:aws:iam::aws:policy/AdministratorAccess"]
+            
+        
+    }
+}
