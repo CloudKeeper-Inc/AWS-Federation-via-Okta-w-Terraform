@@ -11,10 +11,11 @@ terraform {
   }
 }
 
+# Add API Token and Okta Org Name here 
 
 provider "okta" {
-  org_name        = "trial-5429295"
+  org_name        = "trial-xxxx"
   base_url        = "okta.com"
-  api_token       = "00b8TImzBtkbTinszkgLM3GqM0LUIxGK089UPGqzKO"
+  api_token       = "xxxx"
   request_timeout = 30
 }
